@@ -1,6 +1,6 @@
 ## Springboot JPA with CRUD and Join Operations
 
- This is a sample project in springboot and jpa(hibernate) using mysql database. 
+ This is a sample project in springboot and jpa(hibernate) using H2 database (applicable to other database as well).
  
  JPA stands for java persistence API which is a collection of classes and methods which is used to store large amount of data permanently to the database and it also reduces the amount of code needed and simplifieds database interactions. 
  
