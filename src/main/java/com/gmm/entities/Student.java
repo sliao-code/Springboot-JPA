@@ -63,6 +63,10 @@ public class Student {
 	}
 	
 	@ManyToOne //Manytoone since many students belong to one department
+	// In @JoinColumn, the name ("deptid") represents the column name of this table ("students"), which will be created
+	// automatically by JPA. The database table "students" doesn't hold Department object. The annotation indicates it has
+	// a column, "deptid" to represent Department. The referencedColumn ("id") represents the corresponding column in 
+	// Table "departments", that should be joined with "deptid".
 	@JoinColumn(name="deptid", referencedColumnName = "id")
 	private Department department;
 	public Department getDepartment() {

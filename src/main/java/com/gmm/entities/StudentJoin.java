@@ -1,12 +1,10 @@
 package com.gmm.entities;
 
-//Author: Muthu Mariyappan G
-
-import java.io.Serializable;
-
+// This class is not persisted so no annotation is needed. It doesn't represent any database table.
 // This entity represents the join between student and department
 
-public class StudentJoin implements Serializable{
+import java.io.Serializable;
+public class StudentJoin implements Serializable { // need to implement Serializable to be converted to JSON.
 
 	private static final long serialVersionUID = 1L;
 	

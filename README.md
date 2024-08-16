@@ -1,4 +1,4 @@
-## Springboot-JPA-with-crud-and-join-operations
+## Springboot JPA with CRUD and Join Operations
 
  This is a sample project in springboot and jpa(hibernate) using mysql database. 
  
@@ -49,7 +49,7 @@ public class Department {
 	// without explicit association annotation
 }
 ```
-* In class "Student", the corresponding table in the database is called "students". It has a private member variable called "department" with type of ```Department```. In the database, the corresponding column is implemented as "depatid" as specified in ```@JoinColumn``` annotation. So the ```Student``` entity in Java codes stores the ```Department`` entity class; while the database table "students" stores only "deptid", the __Primary ID__ of Table "departments". JPS automatically makes the association.
+* In class "Student", the corresponding table in the database is called "students". It has a private member variable called "department" with type of ```Department```. In the database, the corresponding column is implemented as "depatid" as specified in ```@JoinColumn``` annotation. So the ```Student``` entity in Java codes stores the ```Department``` entity class; while the database table "students" stores only "deptid", the __Primary ID__ of Table "departments". JPS automatically makes the association.
 * In class "Department", there is no annotation for association, so there is no column in Table "departments" for association or relation to Table "students". This is what we normally will do in designing database tables.
 * Since class ```Department``` doesn't have variables to represent all the students belonging to the specific department, we will need to use SQL queries to get a list of students in the specific repository interface.
   ```

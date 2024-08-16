@@ -12,6 +12,8 @@ import com.gmm.entities.Student;
 @Repository
 public interface DepartmentRepository extends JpaRepository<Department,Integer>{
 
+    // Use JPQL to query a list of Student for a specific department id, since OneToMany is not defined in
+    // Department entity.
     @Query("select u from Student u where u.department.id = ?1")
     public List <Student> findStudentsByDepartmentId(int id);
 }

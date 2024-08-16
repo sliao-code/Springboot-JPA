@@ -36,7 +36,7 @@ public class JPAdemoController {
 	
 	// This prints the joined view of Student and Department tables
 	@GetMapping(value="/jointable")  
-	public List<StudentJoin> displayJoinTable(){
+	public List<StudentJoin> displayJoinTable(){ // this shows how to contruct a customerized join result with StudentJoin object
 		return this.studentRepository.join();     
 	}
 	
@@ -60,10 +60,11 @@ public class JPAdemoController {
 		//RequestParam gets the value from url, eg: ?name=harry -- here harry mapped to String name
 		Map<String,String> message = new LinkedHashMap<>();
 		Student newStudent;
-		if(this.departmentRepository.findById(deptid).isPresent()) {
+		if(this.departmentRepository.findById(deptid).isPresent()) { // Create a new Student object and fill info
 			newStudent = new Student();
 			newStudent.setName(name);
 			newStudent.setCgpa(cgpa);
+			// A Depart object is retrived from database by "deptid" and assigned to the Student object.
 			newStudent.setDepartment(this.departmentRepository.findById(deptid).get());
 			
 			if(this.studentRepository.save(newStudent)!=null) {

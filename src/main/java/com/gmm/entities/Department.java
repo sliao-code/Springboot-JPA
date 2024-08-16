@@ -1,18 +1,16 @@
 package com.gmm.entities;
 
-//Author: Muthu Mariyappan G
-
-import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
+//import java.io.Serializable;
+//import java.util.HashSet;
+//import java.util.Set;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
+//import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-import jakarta.persistence.OneToMany;
+//import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 // Entity class Represents the record in department table
@@ -57,6 +55,7 @@ public class Department {
 		this.name=name;
 	}
 	
+	// OneToMany association doesn't seem to be a good idea. The set of students in a department can be very large
 	//Onetomany -- One department may contain many studentes
 	/*
 	@OneToMany(fetch=FetchType.LAZY, mappedBy = "department") //FetchType.Lazy loads the entities only when necessary good when dealing with lots of records
