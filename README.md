@@ -126,7 +126,7 @@ Native SQl can be used with ```@Query`` as well, but mapping the results from a 
 
 2. Add new student entry to the table
 
-	> http://localhost:8080/student/insert?name=kai&cgpa=9.87&deptid=100
+	> http://localhost:8080/student/insert?name=kai&cgpa=9.87&deptid=1
 
 3. Join student and department table
 
